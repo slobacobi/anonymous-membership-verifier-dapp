@@ -1,0 +1,100 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "beforeEach",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testDoubleSpendingPrevention",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testInvalidProof",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testValidProof",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"testDoubleSpendingPrevention()": {
+					"details": "Test 3: Pokušaj ponovne upotrebe istog dokaza (Nullifier zaštita)"
+				},
+				"testInvalidProof()": {
+					"details": "Test 2: Odbijanje nevalidnog dokaza (korisnik koji nije u stablu)"
+				},
+				"testValidProof()": {
+					"details": "Test 1: Uspešna verifikacija validnog člana skupa"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"tests/AnonymousVerifier_test.sol": "AnonymousVerifierTest"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix_tests.sol": {
+			"keccak256": "0xe2783cdc204cba8c72494119339f1d90f9022b15d6c718c668b7f097d8e29787",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bb6a22e64c7f16bcaab63b1c1a1b269d5be8a6d37bdd9dec1718477ab916b18e",
+				"dweb:/ipfs/QmdkW1tT5iadBvaHMCoskhDGZKnfdg8o1D9CcoQYtdJet7"
+			]
+		},
+		"tests/AnonymousVerifier.sol": {
+			"keccak256": "0xbf0eac9538a1af173da01053cd4cafa3fed5ee25ac4dece6bbe7d8366210233d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://491858cc2131d9584ed6224003fc5a07c287c9ac867ec419dbcb3bbc5451a02c",
+				"dweb:/ipfs/Qmd8fnhGJ8phFcvV4dMtJpr2jcnaYk1MXpokdrzG8vacXX"
+			]
+		},
+		"tests/AnonymousVerifier_test.sol": {
+			"keccak256": "0x7b77e197f9d430fd9377b508f635f1e0af2650679ee9889d0865397ba2da1bf9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d3f8ba2c6a5eca06949371f6a565acc296dcb3fe5cb505eacf9f33ce89d60fd5",
+				"dweb:/ipfs/QmNpYndKhBQr56JRhD1i1wRyG5VHzAHsyENo8PC2CsCJVZ"
+			]
+		}
+	},
+	"version": 1
+}

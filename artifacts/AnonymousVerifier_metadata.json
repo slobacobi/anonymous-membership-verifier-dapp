@@ -1,0 +1,201 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_initialRoot",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "newRoot",
+						"type": "bytes32"
+					}
+				],
+				"name": "RootUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "reason",
+						"type": "string"
+					}
+				],
+				"name": "VerificationFailed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "nullifier",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "attribute",
+						"type": "string"
+					}
+				],
+				"name": "VerificationSuccess",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "merkleRoot",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "nullifiers",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_newRoot",
+						"type": "bytes32"
+					}
+				],
+				"name": "updateMerkleRoot",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32[]",
+						"name": "proof",
+						"type": "bytes32[]"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "leaf",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "nullifier",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "attribute",
+						"type": "string"
+					}
+				],
+				"name": "verifyAttribute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"updateMerkleRoot(bytes32)": {
+					"details": "Eksterna funkcija za administratora da ažurira Merkle Root kada se dodaju novi članovi"
+				},
+				"verifyAttribute(bytes32[],bytes32,bytes32,string)": {
+					"details": "Glavna funkcija za anonimnu verifikaciju atributa",
+					"params": {
+						"attribute": "Naziv atributa koji korisnik dokazuje (npr. \"Punoletan\")",
+						"leaf": "Hash identiteta korisnika koji se proverava da li je u stablu",
+						"nullifier": "Jedinstvena oznaka (izvedena iz tajne) koja sprečava dvostruku verifikaciju",
+						"proof": "Niz hash-eva koji čine Merkle dokaz (putanju od lista do korena)"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"tests/AnonymousVerifier.sol": "AnonymousVerifier"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"tests/AnonymousVerifier.sol": {
+			"keccak256": "0xbf0eac9538a1af173da01053cd4cafa3fed5ee25ac4dece6bbe7d8366210233d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://491858cc2131d9584ed6224003fc5a07c287c9ac867ec419dbcb3bbc5451a02c",
+				"dweb:/ipfs/Qmd8fnhGJ8phFcvV4dMtJpr2jcnaYk1MXpokdrzG8vacXX"
+			]
+		}
+	},
+	"version": 1
+}
